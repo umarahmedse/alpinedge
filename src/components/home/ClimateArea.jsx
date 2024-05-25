@@ -1,6 +1,42 @@
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+
 const ClimateArea = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const top = window.pageYOffset + window.innerHeight;
+      const elementTop = document.getElementById("climateArea").offsetTop;
+
+      if (top > elementTop) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({ opacity: 1 });
+    }
+  }, [isVisible, controls]);
+
   return (
-    <div className="flex items-center justify-center flex-col bg-climateBg bg-cover bg-no-repeat p-16 gap-4 font-montserrat text-white">
+    <motion.div
+      id="climateArea"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+      className="flex items-center justify-center flex-col bg-climateBg bg-cover bg-no-repeat p-16 gap-4 font-montserrat text-white"
+    >
       <div className="flex items-center gap-4">
         <img
           src="https://i.ibb.co/KqXLDF8/Blue-Modern-Limitless-Technology-Company-Logo-4-1.png"
@@ -26,7 +62,7 @@ const ClimateArea = () => {
       <h1 className="font-bold text-xl uppercase text-white">
         Explore our partnership with Stripe Climate here.{" "}
       </h1>
-    </div>
+    </motion.div>
   );
 };
 

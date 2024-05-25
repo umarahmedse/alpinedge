@@ -1,8 +1,44 @@
 import iceflakesvg from "../../utils/svgs/ice-flase.svg";
 
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+
 const AlpineCompanions = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const top = window.pageYOffset + window.innerHeight;
+      const elementTop = document.getElementById("alpineCompanions").offsetTop;
+
+      if (top > elementTop) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({ opacity: 1 });
+    }
+  }, [isVisible, controls]);
+
   return (
-    <div className="bg-bgPrimary 1000px:py-12 1000px:pr-8 font-montserrat relative">
+    <motion.div
+      id="alpineCompanions"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+      className="bg-bgPrimary 1000px:py-12 1000px:pr-8 font-montserrat relative"
+    >
       <div className="bg-[#80BFFF] 1000px:rounded-r-full p-2 1000px:py-6">
         <div className="flex items-center gap-2 flex-wrap 800px:flex-nowrap">
           <div className="flex flex-col gap-2 w-full 800px:w-1/2">
@@ -45,8 +81,8 @@ const AlpineCompanions = () => {
           <div className="flex items-center flex-col gap-2 w-full 800px:w-1/2">
             {" "}
             <div className="flex flex-col gap-4 items-center">
-              <h1 className="font-bold text-4xl capitalize text-primary font-montserrat">
-                The finish line Awaits!{" "}
+              <h1 className="font-bold text-4xl capitalize text-primary font-montserrat text-center">
+                The finish line <br /> Awaits!{" "}
               </h1>
               <p className="text-2xl text-white text-center max-w-[400px]">
                 join the team of our successful AlpinEdge Traders. If you are
@@ -65,12 +101,15 @@ const AlpineCompanions = () => {
           </div>
         </div>
       </div>
-      <img
+      <motion.img
         src={iceflakesvg}
         alt="ice flakes"
         className="absolute -right-10 -top-10 w-[300px] h-[300px]"
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1, delay: 0.5 }}
       />
-    </div>
+    </motion.div>
   );
 };
 

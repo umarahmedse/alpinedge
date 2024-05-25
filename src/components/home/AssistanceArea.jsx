@@ -1,8 +1,44 @@
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { faqData } from "../../data/navbarData";
 import iceflakesvg from "../../utils/svgs/ice-flase.svg";
+
 const AssistantArea = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const top = window.pageYOffset + window.innerHeight;
+      const elementTop = document.getElementById("assistantArea").offsetTop;
+
+      if (top > elementTop) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({ opacity: 1 });
+    }
+  }, [isVisible, controls]);
+
   return (
-    <div className="bg-bgPrimary 1000px:py-12 1000px:pl-8 font-montserrat relative">
+    <motion.div
+      id="assistantArea"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+      className="bg-bgPrimary 1000px:py-12 1000px:pl-8 font-montserrat relative"
+    >
       <div className="bg-white 1000px:rounded-l-full p-2 1000px:py-6 z-20">
         <div className="flex items-center gap-2 flex-wrap 800px:flex-nowrap">
           <div className="flex  flex-col 1000px:py-12 1000px:pl-32 p-4 gap-8 w-full 800px:w-1/2">
@@ -41,12 +77,15 @@ const AssistantArea = () => {
           </div>
         </div>
       </div>
-      <img
+      <motion.img
         src={iceflakesvg}
         alt="ice flakes"
         className="absolute -left-10 -top-10 w-[300px] h-[300px]"
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1, delay: 0.5 }}
       />
-    </div>
+    </motion.div>
   );
 };
 

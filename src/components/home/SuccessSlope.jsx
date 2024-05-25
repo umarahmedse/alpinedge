@@ -1,6 +1,42 @@
+import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+
 const SuccessSlope = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const top = window.pageYOffset + window.innerHeight;
+      const elementTop = document.getElementById("successSlope").offsetTop;
+
+      if (top > elementTop) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      controls.start({ opacity: 1 });
+    }
+  }, [isVisible, controls]);
+
   return (
-    <div className="w-full flex items-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover p-16 gap-4 font-montserrat text-white">
+    <motion.div
+      id="successSlope"
+      initial={{ opacity: 0 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+      className="w-full flex items-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover p-16 gap-4 font-montserrat text-white"
+    >
       <div>
         {" "}
         <h1 className="font-bold text-3xl uppercase text-white text-center mb-4">
@@ -50,7 +86,7 @@ const SuccessSlope = () => {
         the giveaway, nor does it increase the chance of winning. By enrolling
         in the giveaway you agree to our Terms & Conditions
       </p>
-    </div>
+    </motion.div>
   );
 };
 

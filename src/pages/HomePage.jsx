@@ -29,16 +29,17 @@ const HomePage = () => {
           duration={0.5}
         />
       </div>
-      {/* <StatsDisclaimer />
+
+      <StatsDisclaimer />
       <HowItWorks />
       <OurBrooker />
       <ClientArea />
-      <AlpinedgeTraders />
       <WhatSetsApart />
+      <AlpinedgeTraders />
       <AlpineCompanions />
       <AssistantArea />
       <ClimateArea />
-      <SuccessSlope />*/}
+      <SuccessSlope />
       <JoinUs />
     </div>
   );

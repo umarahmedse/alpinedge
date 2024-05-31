@@ -12,25 +12,28 @@ import JoinUs from "../components/home/JoinUs";
 import OurBrooker from "../components/home/OurBrooker";
 import StatsDisclaimer from "../components/home/StatsDisclaimer";
 import SuccessSlope from "../components/home/SuccessSlope";
+import VideoSection from "../components/home/VideoSection";
+import CoinSlider from "../components/home/CoinSlider";
 
 const HomePage = () => {
   return (
     <div className="bg-bgPrimary overflow-hidden">
       <Hero />
-      <div className="p-4 flex flex-col items-center justify-center gap-2">
+      {/* <div className="p-4 flex flex-col items-center justify-center gap-2">
         <h1 className="font-montserrat text-4xl font-bold text-center text-primary">
           Launching In
         </h1>
         <FlipClockCountdown
           className="flip-clock text-primary"
-          to={new Date("2024-06-01").getTime()}
+          to={new Date("2024-06-19").getTime()}
           labelStyle={{ color: "#004D99" }}
           labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
           duration={0.5}
         />
-      </div>
-
+      </div> */}
+<CoinSlider/>
       <StatsDisclaimer />
+      <VideoSection/>
       <HowItWorks />
       <OurBrooker />
       <ClientArea />

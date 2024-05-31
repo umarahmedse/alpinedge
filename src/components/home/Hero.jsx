@@ -1,8 +1,29 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (bgRef.current) {
+        const scrollPosition = window.scrollY;
+        bgRef.current.style.backgroundPositionY = `${-scrollPosition / 2}px`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="800px:h-[115vh] w-full bg-heroBg bg-cover bg-no-repeat flex items-center gap-24 800px:gap-52 flex-col ">
+    <div
+      ref={bgRef}
+      className="800px:h-[120vh] w-full bg-heroBg bg-cover bg-no-repeat flex items-center gap-24 800px:gap-52 flex-col"
+    >
       <div className="flex items-center flex-col">
         <img src="/logo.webp" alt=" logo image" className="w-[250px] " />
         <h1 className="text-primary font-montserrat uppercase 800px:text-[6rem] text-[2rem] font-bold leading-none mt-2 800px:mt-0">

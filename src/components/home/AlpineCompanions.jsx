@@ -72,7 +72,7 @@ const AlpineCompanions = () => {
                 <li>11 Active Days on Account</li>
               </ul>
               <img
-                src="/skater.webp"
+                src="/skater.svg"
                 alt="skater image "
                 className="hidden 1000px:block max-w-[250px]"
               />

@@ -14,6 +14,7 @@ import StatsDisclaimer from "../components/home/StatsDisclaimer";
 import SuccessSlope from "../components/home/SuccessSlope";
 import VideoSection from "../components/home/VideoSection";
 import CoinSlider from "../components/home/CoinSlider";
+import PickSlope from "../components/home/PickSlope";
 
 const HomePage = () => {
   return (
@@ -35,6 +36,7 @@ const HomePage = () => {
       <StatsDisclaimer />
       <VideoSection/>
       <HowItWorks />
+      <PickSlope/>
       <OurBrooker />
       <ClientArea />
       <WhatSetsApart />

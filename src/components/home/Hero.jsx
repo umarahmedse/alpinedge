@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 
 const Hero = () => {
   const bgRef = useRef(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,10 +23,10 @@ const Hero = () => {
   return (
     <div
       ref={bgRef}
-      className="800px:h-[120vh] w-full bg-heroBg bg-cover bg-no-repeat flex items-center gap-24 800px:gap-52 flex-col"
+      className="relative 800px:h-[120vh] w-full bg-heroBg bg-cover bg-no-repeat flex items-center gap-24 800px:gap-52 flex-col"
     >
       <div className="flex items-center flex-col">
-        <img src="/logo.webp" alt=" logo image" className="w-[250px] " />
+        <img src="/logo.webp" alt="logo image" className="w-[250px] " />
         <h1 className="text-primary font-montserrat uppercase 800px:text-[6rem] text-[2rem] font-bold leading-none mt-2 800px:mt-0">
           Alpinedge
         </h1>
@@ -54,6 +55,40 @@ const Hero = () => {
           Coming Soon
         </motion.button>
       </div>
+
+      {/* Hamburger Button */}
+      <button
+        onClick={() => setIsDrawerOpen(true)}
+        className="absolute top-4 right-4 z-20 p-2 bg-white rounded-md shadow-md"
+      >
+        <div className="w-6 h-0.5 bg-black mb-1"></div>
+        <div className="w-6 h-0.5 bg-black mb-1"></div>
+        <div className="w-6 h-0.5 bg-black"></div>
+      </button>
+
+      {/* Drawer Overlay */}
+      <AnimatePresence>
+        {isDrawerOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 right-0 w-[100px] h-full bg-blue-600 bg-opacity-40 z-40 p-4"
+          >
+            <button
+              onClick={() => setIsDrawerOpen(false)}
+              className="absolute top-4 right-4 text-white"
+            >
+              Close
+            </button>
+            <div className="mt-8">
+              {/* Add your drawer content here */}
+              <p className="text-white text-xl">Drawer Content</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

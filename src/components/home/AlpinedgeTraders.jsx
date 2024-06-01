@@ -57,7 +57,7 @@ const AlpinedgeTraders = () => {
         transition={{ duration: 0.5, delay: 0.2, staggerChildren: 0.3 }}
       >
         <motion.div
-          className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl"
+          className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl ml-4"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -79,7 +79,7 @@ const AlpinedgeTraders = () => {
           Your browser does not support the video tag.
         </video>
         <motion.div
-          className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl"
+          className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl mr-4"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

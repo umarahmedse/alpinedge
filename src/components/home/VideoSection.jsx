@@ -37,7 +37,7 @@ const VideoSection = () => {
       transition={{ duration: 0.5 }}
       className="w-full flex items-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover p-16 gap-4 font-montserrat text-white"
     >
-     <video src="https://res.cloudinary.com/dxtclcoxh/video/upload/v1717170017/uxrcrok7bd22nxzs8ojp.mp4" className=" 1200px:w-[1200px] w-[350px]" autoPlay loop ></video>
+     <video src="https://res.cloudinary.com/dxtclcoxh/video/upload/v1717170017/uxrcrok7bd22nxzs8ojp.mp4" className=" 1200px:w-[1200px] w-[350px]" autoPlay loop muted  ></video>
     </motion.div>
   );
 };

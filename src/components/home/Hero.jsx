@@ -115,8 +115,8 @@ const Hero = () => {
               <MdKeyboardDoubleArrowUp id="double-arrow-up" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleDoubleArrowUpClick} />
               <MdKeyboardArrowUp id="arrow-up" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleArrowUpClick} />
               <div className="h-32 border-l-2 border-dashed border-white"></div>
-              <MdKeyboardDoubleArrowDown id="double-arrow-down" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleDoubleArrowDownClick} />
-              <MdKeyboardArrowDown id="arrow-down" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleArrowDownClick} />
+              <MdKeyboardArrowDown id="arrow-down" size={40} color="#fff" className="animate-bounceReverse hover:cursor-pointer" onClick={handleArrowDownClick} />
+              <MdKeyboardDoubleArrowDown id="double-arrow-down" size={40} color="#fff" className="animate-bounceReverse hover:cursor-pointer" onClick={handleDoubleArrowDownClick} />
             </div>
           </motion.div>
         )}

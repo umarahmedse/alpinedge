@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp, MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp } from "react-icons/md";
 
 const Hero = () => {
   const bgRef = useRef(null);
@@ -19,6 +20,34 @@ const Hero = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleDoubleArrowUpClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
+  const handleArrowUpClick = () => {
+    window.scrollTo({
+      top: window.innerHeight / 2,
+      behavior: "smooth"
+    });
+  };
+
+  const handleDoubleArrowDownClick = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth"
+    });
+  };
+
+  const handleArrowDownClick = () => {
+    window.scrollTo({
+      top: window.innerHeight / 2,
+      behavior: "smooth"
+    });
+  };
 
   return (
     <div
@@ -74,7 +103,7 @@ const Hero = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 w-[100px] h-full bg-blue-600 bg-opacity-40 z-40 p-4"
+            className="fixed top-0 right-0 w-[100px] h-full bg-blue-600 bg-opacity-60 z-40 p-4"
           >
             <button
               onClick={() => setIsDrawerOpen(false)}
@@ -82,9 +111,12 @@ const Hero = () => {
             >
               Close
             </button>
-            <div className="mt-8">
-              {/* Add your drawer content here */}
-              <p className="text-white text-xl">Drawer Content</p>
+            <div className="mt-40 flex flex-col justify-center items-center gap-4 my-auto h-1/2">
+              <MdKeyboardDoubleArrowUp id="double-arrow-up" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleDoubleArrowUpClick} />
+              <MdKeyboardArrowUp id="arrow-up" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleArrowUpClick} />
+              <div className="h-32 border-l-2 border-dashed border-white"></div>
+              <MdKeyboardDoubleArrowDown id="double-arrow-down" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleDoubleArrowDownClick} />
+              <MdKeyboardArrowDown id="arrow-down" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleArrowDownClick} />
             </div>
           </motion.div>
         )}

@@ -54,7 +54,7 @@ const ClientArea = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={isVisible ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.5 }}
-          src="/clientarea.webp"
+          src="/main-at.webp"
           alt="broker stats image"
           className="object-contain 800px:w-1/2"
         />

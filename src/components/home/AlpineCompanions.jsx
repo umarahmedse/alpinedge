@@ -44,8 +44,7 @@ const AlpineCompanions = () => {
           <div className="flex flex-col gap-2 w-full 800px:w-1/2">
             <div className="flex flex-col gap-2 p-4">
               <h1 className="font-bold text-3xl capitalize text-primary font-montserrat">
-                Our Alpinedge Companions
-              </h1>
+              Our AlpinEdge Beta Champions              </h1>
               <p className="text-lg">
                 Our AlpinEdge Trader Alex H. just received a payout of{" "}
                 <span className="text-primary font-bold">$xxx</span> on his{" "}
@@ -85,7 +84,7 @@ const AlpineCompanions = () => {
                 The finish line <br /> Awaits!{" "}
               </h1>
               <p className="text-2xl text-white text-center max-w-[400px]">
-                join the team of our successful AlpinEdge Traders. If you are
+                Join the team of our successful AlpinEdge Traders. If you are
                 ready, select your preffered ski pass and become our next
                 AlpinEdge Champion!
               </p>

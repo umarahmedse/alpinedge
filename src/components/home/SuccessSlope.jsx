@@ -40,7 +40,7 @@ const SuccessSlope = () => {
       <div>
         {" "}
         <h1 className="font-bold text-3xl uppercase text-white text-center mb-4">
-          SLOPE TO SUCCESS <br /> GIVEAWAY
+        Slope to Success Ski Club
         </h1>
         <p className="text-md uppercase font-bold text-center max-w-[900px]">
           Sign up now to participate in our monthly giveaway* free of charge!
@@ -64,7 +64,7 @@ const SuccessSlope = () => {
           type="submit"
           className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
         >
-          Search
+          Submit
         </button>
       </div>
       <div className="form-control">

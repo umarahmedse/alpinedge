@@ -36,13 +36,7 @@ const OurBrooker = () => {
             Our Brooker
           </h1>
           <p className="800px:text-[1.7rem] 800px:w-[85%] !leading-[40px]">
-            We are exclusively partnering with the most{" "}
-            <strong>reliable</strong> and <strong>reputable</strong> broker in
-            the industry. Known for a supreme network of T1-Liquidity Providers
-            and fair execution via STP/DMA only our broker provides our traders{" "}
-            <strong>live accounts </strong>
-            with <strong>virtual capital</strong> allocated throughout all
-            phases of your trading with AlpinEdge!
+          We are exclusively partnering with ActivTrades, a supreme retail trading brokerage regulated and licenced in multiple jursidictions and based in the UK. Known for a supreme network of T1-Liquidity Providers and fairest possible execution only (no re-quotes) our broker provides our traders demo accounts with virtual capital allocated throughout all phases of your trading with AlpinEdge!
           </p>
         </div>
         <motion.img

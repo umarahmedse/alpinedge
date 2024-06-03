@@ -31,11 +31,11 @@ const OurBrooker = () => {
       className="w-full p-8 bg-white"
     >
       <div className="flex items-center justify-between gap-2 flex-col 800px:flex-row ">
-        <div className="flex flex-col gap-6 800px:w-1/2 h-full">
-          <h1 className="font-bold text-primary font-montserrat text-xl 800px:text-[1.8rem]">
+        <div className="flex flex-col gap-3 md:gap-6 800px:w-1/2 h-full">
+          <h1 className="font-bold text-primary font-montserrat text-[16px] 800px:text-xl 800px:text-[1.8rem]">
             Our Brooker
           </h1>
-          <p className="800px:text-[1.7rem] 800px:w-[85%] !leading-[40px]">
+          <p className="800px:text-[1.7rem] 800px:w-[85%] md:!leading-[40px] text-sm md:text-start text-center">
           We are exclusively partnering with ActivTrades, a supreme retail trading brokerage regulated and licenced in multiple jursidictions and based in the UK. Known for a supreme network of T1-Liquidity Providers and fairest possible execution only (no re-quotes) our broker provides our traders demo accounts with virtual capital allocated throughout all phases of your trading with AlpinEdge!
           </p>
         </div>

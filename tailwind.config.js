@@ -50,7 +50,6 @@ module.exports = {
       backgroundImage: {
         heroBg: "url('/heroBg.webp')",
         ice: "url('/iceline.png')",
-
         climateBg: "url('/Climate.webp')",
         successSlope: "url('/successSlope.webp')",
       },

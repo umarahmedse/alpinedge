@@ -62,11 +62,11 @@ const AssistantArea = () => {
               ))}
             </div>
           </div>
-          <div className="flex  flex-col  p-4 gap-2 w-full 800px:w-1/2">
-            <h1 className="font-bold text-3xl uppercase text-primary font-montserrat">
+          <div className="flex  flex-col md:text-start text-center p-4 gap-2 w-full 800px:w-1/2">
+            <h1 className="font-bold text-xl md:text-3xl uppercase text-primary font-montserrat">
               Need assistance?{" "}
             </h1>
-            <h1 className="font-bold text-2xl uppercase text-primary font-montserrat">
+            <h1 className="font-bold text-[16px] md:text-2xl uppercase text-primary font-montserrat">
               Ask Alois, your personal ski guide{" "}
             </h1>
             <img

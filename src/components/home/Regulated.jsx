@@ -35,22 +35,22 @@ const Regulated = () => {
                     <h1 className="font-bold text-primary font-montserrat text-xl 800px:text-[1.8rem]">
                         FOUR TIMES REGULATED & LICENCED          </h1>
                     <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
+                        <div className="flex md:text-[16px] text-[10px]  md:gap-2  gap-1 items-center ">
                             <VscVerifiedFilled size={30} fill="#004D99" />
                             <p>EU-Onshore (Portugal)</p>
 
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center md:gap-2  gap-1 md:text-[16px] text-[10px]">
                             <VscVerifiedFilled size={30} fill="#004D99" />
                             <p>UK-Onshore (England)</p>
 
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center md:gap-2  gap-1 md:text-[16px] text-[10px]">
                             <VscVerifiedFilled size={30} fill="#004D99" />
                             <p>AMER-Onshore (Brasil)</p>
 
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center md:gap-2  gap-1 md:text-[16px] text-[10px]">
                             <VscVerifiedFilled size={30} fill="#004D99" />
                             <p>AMER-Offshore (Bahamas)</p>
 
@@ -63,11 +63,11 @@ const Regulated = () => {
                     {regulatedData.map((item,index)=>(
                         <div className="flex items-center gap-2">
                             {item.icon}
-                            <h1 className="text-lg">{item.title}</h1>
+                            <h1 className="md:text-lg text-sm">{item.title}</h1>
                         </div>
                     ))}
                 </div>
-<div className="flex items-center justify-center flex-wrap tracking-tight">
+<div className="flex items-center justify-center flex-wrap tracking-tight ">
     <img src="https://i.ibb.co/746BW0k/attachment-7.png" alt="partnet-logo" className="w-[200px] h-[80px]" />
     <img src="https://i.ibb.co/ZfbRxL8/Activ-Trades-Logo-1024x427.webp" alt="partnet-logo" className="w-[200px] h-[80px]" />
     <img src="https://svgshare.com/i/16jh.svg" alt="partnet-logo" className="w-[200px]" />

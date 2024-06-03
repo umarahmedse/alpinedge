@@ -39,13 +39,13 @@ const AlpineCompanions = () => {
       transition={{ duration: 0.5 }}
       className="bg-bgPrimary 1000px:py-12 1000px:pr-8 font-montserrat relative"
     >
-      <div className="bg-[#80BFFF] 1000px:rounded-r-full p-2 1000px:py-6">
+      <div className="bg-[#80BFFF] 1000px:rounded-r-full px-2 py-10 1000px:py-6">
         <div className="flex items-center gap-2 flex-wrap 800px:flex-nowrap">
           <div className="flex flex-col gap-2 w-full 800px:w-1/2">
             <div className="flex flex-col gap-2 p-4">
-              <h1 className="font-bold text-3xl capitalize text-primary font-montserrat">
+              <h1 className="font-bold text-3xl capitalize md:text-start text-center text-primary font-montserrat">
               Our AlpinEdge Beta Champions              </h1>
-              <p className="text-lg">
+              <p className="text-lg text-white md:text-start text-center">
                 Our AlpinEdge Trader Alex H. just received a payout of{" "}
                 <span className="text-primary font-bold">$xxx</span> on his{" "}
                 <span className="text-primary font-bold">$xxx</span> AlpinEdge
@@ -80,19 +80,20 @@ const AlpineCompanions = () => {
           <div className="flex items-center flex-col gap-2 w-full 800px:w-1/2">
             {" "}
             <div className="flex flex-col gap-4 items-center">
-              <h1 className="font-bold text-4xl capitalize text-primary font-montserrat text-center">
+
+              <h1 className="font-bold text-4xl  my-4 md:my-0 capitalize text-primary font-montserrat text-center">
                 The finish line <br /> Awaits!{" "}
               </h1>
-              <p className="text-2xl text-white text-center max-w-[400px]">
+              <p className="md:text-2xl text-xl text-white text-center max-w-[400px]">
                 Join the team of our successful AlpinEdge Traders. If you are
                 ready, select your preffered ski pass and become our next
                 AlpinEdge Champion!
               </p>
-              <div className="flex items-center gap-2">
-                <button className="px-8 py-3 uppercase 800px:text-lg bg-primary text-white font-[500] rounded-lg">
+              <div className="flex items-center gap-2 justify-between ">
+                <button className="md:px-8 px-3 py-3 uppercase text-sm 800px:text-lg bg-primary text-white font-[500] rounded-lg">
                   Buy Challenge{" "}
                 </button>
-                <button className="px-8 py-3 uppercase 800px:text-lg 800px:bg-bgPrimary bg-primary/20 text-primary font-[500] rounded-lg">
+                <button className="md:px-8 px-3 py-3 uppercase text-sm 800px:text-lg 800px:bg-bgPrimary bg-primary/20 text-primary font-[500] rounded-lg">
                   Alpinedge Resort{" "}
                 </button>
               </div>

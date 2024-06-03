@@ -49,6 +49,7 @@ const Hero = () => {
     });
   };
 
+  
   return (
     <div
       ref={bgRef}
@@ -88,9 +89,9 @@ const Hero = () => {
       {/* Hamburger Button */}
       <button
         onClick={() => setIsDrawerOpen(true)}
-        className="absolute top-4 right-4 z-20 p-2 bg-white rounded-md shadow-md"
+        className="absolute top-4 right-4 z-20 p-2 rounded-md shadow-md md:block hidden"
       >
-        <div className="w-6 h-0.5 bg-black mb-1"></div>
+        <div className="w-6 h-0.5 bg-black mb-1 "></div>
         <div className="w-6 h-0.5 bg-black mb-1"></div>
         <div className="w-6 h-0.5 bg-black"></div>
       </button>

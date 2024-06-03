@@ -35,7 +35,7 @@ const SuccessSlope = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="w-full flex items-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover p-16 gap-4 font-montserrat text-white"
+      className="w-full flex items-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover px-6 py-10 md:p-16 gap-4 font-montserrat text-white"
     >
       <div>
         {" "}
@@ -52,7 +52,7 @@ const SuccessSlope = () => {
       </div>
       <img src="https://i.ibb.co/CBRRCdx/Ellipse-88.webp" alt="user-image" />
 
-      <div className="relative max-w-2xl 800px:w-[600px]">
+      <div className="relative max-w-2xl 800px:w-[600px] w-full">
         <input
           type="search"
           id="default-search"

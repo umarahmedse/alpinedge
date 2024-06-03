@@ -36,31 +36,31 @@ const PickSlope = () => {
         Pick Your Slope
       </h1>
       <div className="w-full flex justify-center">
-        <Lottie options={defaultOptions} height={600} width={600} />
+      <Lottie options={defaultOptions} height={"md:600px"} width={"md:600px"} />
       </div>
       <div className="w-full flex flex-col items-center p-4">
-        <div className="flex items-center 1000px:w-1/2 mx-auto justify-between">
+        <div className="flex items-center  w-full 1000px:w-1/2 mx-auto justify-between">
           <div
-            className="border border-2 border-primary w-[50px] h-[50px] rounded-full flex items-center justify-center text-primary hover:text-white hover:border-white hover:bg-primary hover:cursor-pointer"
+            className="border border-2 border-primary 800px:w-[50px] 800px:h-[50px] rounded-full flex items-center justify-center  text-primary hover:text-white hover:border-white hover:bg-primary hover:cursor-pointer"
             onClick={handleLeftArrowClick}
           >
-            <IoMdArrowBack size={40} />
+            <IoMdArrowBack  className="800px:w-[100px] 800px:h-[100px] 400px:w-[30px] 400px:h-[30px]  " />
           </div>
-          <h1 className="text-2xl">Tap arrow to change</h1>
+          <h1 className="text-xl  100px:text-[16px] 400px:text-xl 800px:text-2xl">Tap arrow to change</h1>
           <div
-            className="border border-2 border-primary w-[50px] h-[50px] rounded-full flex items-center justify-center text-primary hover:text-white hover:border-white hover:bg-primary hover:cursor-pointer"
+            className="border border-2 border-primary 800px:w-[50px] 800px:h-[50px]  rounded-full flex items-center justify-center text-primary hover:text-white hover:border-white hover:bg-primary hover:cursor-pointer"
             onClick={handleRightArrowClick}
           >
-            <IoMdArrowForward size={40} />
+            <IoMdArrowForward className="800px:w-[100px] 800px:h-[100px] 400px:w-[30px] 400px:h-[30px]  " />
           </div>
         </div>
         <h1 className="mx-auto w-fit text-4xl text-primary font-bold font-montserrat mt-12 uppercase">
           Your Ride
         </h1>
-        <div className="mt-8 border-4 border-primary 1000px:w-1/2 relative rounded-3xl text-start uppercase py-2 px-6 font-semibold tracking-[0.5rem]">
+        <div className="mt-8 border-4 border-primary w-full 1000px:w-1/2 relative rounded-3xl text-start uppercase py-2 px-6 font-semibold md:tracking-[0.5rem]">
           BLACK Slope- Standard
         </div>
-        <div className="flex items-center justify-between 1000px:w-1/2 p-4">
+        <div className="flex items-center justify-between w-full 1000px:w-1/2  p-4">
           <div className="flex items-center gap-2">
             <input
               type="checkbox"
@@ -71,7 +71,7 @@ const PickSlope = () => {
             />
             <label
               htmlFor="react-option-1"
-              className="inline-flex items-center justify-between w-full py-2 px-4 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
+              className="inline-flex items-center text-[12px] 1000px:text-[16px] justify-between w-full py-2 md:px-4 px-2 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
             >
               SLALOM
             </label>
@@ -84,7 +84,7 @@ const PickSlope = () => {
             />
             <label
               htmlFor="react-option-2"
-              className="inline-flex items-center justify-between w-full py-2 px-4 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
+              className="inline-flex items-center text-[12px] 1000px:text-[16px]  justify-between w-full py-2 md:px-4 px-2 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
             >
               FREESTYLE
             </label>
@@ -99,7 +99,7 @@ const PickSlope = () => {
             />
             <label
               htmlFor="react-option-3"
-              className="inline-flex items-center justify-between w-full py-2 px-4 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
+              className="inline-flex items-center text-[12px] 1000px:text-[16px]  justify-between w-full py-2 md:px-4 px-2 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
             >
               USD
             </label>
@@ -112,7 +112,7 @@ const PickSlope = () => {
             />
             <label
               htmlFor="react-option-4"
-              className="inline-flex items-center justify-between w-full py-2 px-4 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
+              className="inline-flex items-center text-[12px] 1000px:text-[16px]  justify-between w-full py-2 md:px-4 px-2 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
             >
               EUR
             </label>
@@ -125,7 +125,7 @@ const PickSlope = () => {
             />
             <label
               htmlFor="react-option-5"
-              className="inline-flex items-center justify-between w-full py-2 px-4 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
+              className="inline-flex items-center text-[12px] 1000px:text-[16px]  justify-between w-full py-2 md:px-4 px-2 text-primary font-semibold bg-[#80BFFF] border-2 border-transparent rounded-xl cursor-pointer peer-checked:border-primary hover:text-white peer-checked:text-gray-600 hover:bg-primary"
             >
               GBP
             </label>

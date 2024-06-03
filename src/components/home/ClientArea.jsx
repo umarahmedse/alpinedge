@@ -35,7 +35,7 @@ const ClientArea = () => {
           <h1 className="font-bold text-primary font-montserrat text-xl 800px:text-[1.8rem]">
             Our Client Area
           </h1>
-          <p className="800px:text-[1.7rem]  !leading-[40px]">
+          <p className="800px:text-[1.7rem]  800px:!leading-[40px] 800px:text-start text-center">
             The Space where you succeed. Track your progress through our
             informative dashboard, contact customer support, download your
             certificates and access many more features available in our client

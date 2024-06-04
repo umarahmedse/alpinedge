@@ -47,7 +47,7 @@ const AlpinedgeTraders = () => {
         alt="bg-img"
         className="absolute right-0"
       />
-      <h1 className="text-primary font-montserrat font-bold text-4xl text-center uppercase mb-32 mt-12">
+      <h1 className="text-primary font-montserrat font-bold text-3xl 800px:text-4xl text-center uppercase mb-32 mt-12">
         hear from our alpinedge traders
       </h1>
       <motion.div

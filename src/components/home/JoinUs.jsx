@@ -2,7 +2,7 @@ import { joinUsSocials } from "../../data/navbarData";
 
 const JoinUs = () => {
   return (
-    <div className="flex items-center flex-col p-24 gap-4 font-montserrat bg-climateBg bg-cover bg-no-repeat text-white">
+    <div className="flex items-center flex-col 800px:p-24 p-10 gap-4 font-montserrat bg-climateBg bg-cover bg-no-repeat text-white">
       <h1 className="text-3xl uppercase font-bold">
         <span className="text-[42px]">J</span>oin Us
       </h1>

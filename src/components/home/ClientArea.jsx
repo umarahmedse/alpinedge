@@ -28,14 +28,14 @@ const ClientArea = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="w-full p-8 bg-white"
+      className="w-full 800px:p-8 px-8 bg-white"
     >
       <div className="flex items-center gap-12 flex-col 800px:flex-row-reverse ">
         <div className="flex flex-col gap-4 800px:w-1/2 h-full">
           <h1 className="font-bold text-primary font-montserrat text-xl 800px:text-[1.8rem]">
             Our Client Area
           </h1>
-          <p className="800px:text-[1.7rem]  800px:!leading-[40px] 800px:text-start text-center">
+          <p className="800px:text-[1.7rem] font-medium 800px:font-normal text-[17px] leading-7 800px:!leading-[40px] 800px:text-start text-center">
             The Space where you succeed. Track your progress through our
             informative dashboard, contact customer support, download your
             certificates and access many more features available in our client
@@ -56,7 +56,7 @@ const ClientArea = () => {
           transition={{ duration: 0.5 }}
           src="/main-at.webp"
           alt="broker stats image"
-          className="object-contain 800px:w-1/2"
+          className="object-contain 800px:w-1/2 hidden 800px:block "
         />
       </div>
     </motion.div>

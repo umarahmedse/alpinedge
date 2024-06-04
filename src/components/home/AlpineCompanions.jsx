@@ -80,7 +80,11 @@ const AlpineCompanions = () => {
           <div className="flex items-center flex-col gap-2 w-full 800px:w-1/2">
             {" "}
             <div className="flex flex-col gap-4 items-center">
-
+            <img
+                src="/skater.svg"
+                alt="skater image "
+                className="1000px:hidden block max-w-[250px]"
+              />
               <h1 className="font-bold text-4xl  my-4 md:my-0 capitalize text-primary font-montserrat text-center">
                 The finish line <br /> Awaits!{" "}
               </h1>

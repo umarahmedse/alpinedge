@@ -35,7 +35,7 @@ const ClimateArea = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="flex items-center justify-center flex-col bg-climateBg bg-cover bg-no-repeat md:py-16 py-10 px-3  gap-4 font-montserrat text-white"
+      className="800px:flex items-center justify-center hidden flex-col bg-climateBg bg-cover bg-no-repeat md:py-16 py-10 px-3  gap-4 font-montserrat text-white"
     >
       <div className="flex items-center gap-4">
         <img

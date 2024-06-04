@@ -17,7 +17,10 @@ const Header = () => {
         ))}
       </div>
       <div className="flex items-center gap-4 ml-auto">
-        <button className="px-8 py-2 uppercase text-md bg-primary text-white font-[500] rounded-lg">
+        <button className="px-8 py-2 uppercase text-md bg-primary 800px:block hidden font-bold text-white rounded-lg">
+          Coming Soon{" "}
+        </button>
+        <button className="800px:px-8 py-2 800px:hidden block uppercase md:text-md bg-primary text-[8px] px-2 font-bold text-white rounded-lg">
           Coming Soon{" "}
         </button>
         <div className="dropdown dropdown-end">

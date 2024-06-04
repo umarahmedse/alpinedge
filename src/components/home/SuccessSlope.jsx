@@ -35,7 +35,7 @@ const SuccessSlope = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="w-full flex items-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover px-6 py-10 md:p-16 gap-4 font-montserrat text-white"
+      className="w-full flex items-center bg-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover px-6 py-10 md:p-16 gap-4 font-montserrat text-white"
     >
       <div>
         {" "}

@@ -38,7 +38,15 @@ const VideoSection = () => {
       className="w-full flex items-center justify-center flex-col relative bg-successSlope bg-no-repeat bg-center bg-cover py-7 px-12 1200px:p-16 gap-4 font-montserrat text-white"
     >
       <div className="absolute inset-0 bg-black opacity-50"></div> 
-     <video src="https://res.cloudinary.com/dxtclcoxh/video/upload/v1717170017/uxrcrok7bd22nxzs8ojp.mp4" className="relative 1200px:w-[1200px] " autoPlay loop muted controls ></video>
+
+      <video
+        src="https://res.cloudinary.com/djab9oyj8/video/upload/v1717438389/t0dfjjmqax2lggrxsho4.mp4"
+        className="relative 1200px:w-[1200px]"
+        autoPlay
+        loop
+        muted
+        controls
+      ></video>
     </motion.div>
     
   );

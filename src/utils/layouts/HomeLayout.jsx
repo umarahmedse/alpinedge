@@ -7,7 +7,7 @@ const HomeLayout = () => {
     <div className="w-full">
       <Header />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

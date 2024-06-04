@@ -10,7 +10,7 @@ const Hero = () => {
     const handleScroll = () => {
       if (bgRef.current) {
         const scrollPosition = window.scrollY;
-        bgRef.current.style.backgroundPositionY = `${-scrollPosition / 2}px`;
+        bgRef.current.style.backgroundPositionY = `${-scrollPosition / 15}px`;
       }
     };
 
@@ -30,7 +30,7 @@ const Hero = () => {
 
   const handleArrowUpClick = () => {
     window.scrollTo({
-      top: window.innerHeight / 2,
+      top: window.scrollY - 700, // Scroll up by 700px
       behavior: "smooth"
     });
   };
@@ -44,7 +44,7 @@ const Hero = () => {
 
   const handleArrowDownClick = () => {
     window.scrollTo({
-      top: window.innerHeight / 2,
+      top: window.scrollY + 700, // Scroll down by 700px
       behavior: "smooth"
     });
   };

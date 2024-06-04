@@ -67,7 +67,7 @@ const AlpinedgeTraders = () => {
             className="object-cover h-full rounded-2xl"
           />
         </motion.div>
-        {/* <video
+        <video
           controls={false}
           preload="auto"
           muted
@@ -77,8 +77,8 @@ const AlpinedgeTraders = () => {
         >
           <source src="alpinedgeTraders.webm" type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
-        <img src="/alpinedgeTraders.png" alt="" className="1000px:w-[60%] w-full" />
+        </video>
+
         <motion.div
           className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl mr-4"
           whileHover={{ scale: 1.05 }}

@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage";
 import Imprint from "./pages/Imprint";
 import LoaderPage from "./pages/LoaderPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-
+import Subpage4 from "./components/Subpage4/Subpage4"
 import HomeLayout from "./utils/layouts/HomeLayout";
 import { Route, Routes } from "react-router-dom";
 function App() {
@@ -17,6 +17,8 @@ function App() {
           <Route path="privacy-policy" element={<PrivacyPolicy />} index />
           <Route element={<CookiePolicy />} path="cookie-policy" />
           <Route element={<Imprint />} path="imprint" />
+          <Route element={<Subpage4 />} path="landing" />
+
         </Route>
       </Routes>
     </>

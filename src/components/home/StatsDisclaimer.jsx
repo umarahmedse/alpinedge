@@ -1,6 +1,6 @@
 const StatsDisclaimer = () => {
   return (
-    <div className="bg-bgPrimary 800px:p-4 p-2">
+    <div className="bg-bgPrimary 800px:p-4 p-2" id='section3'>
       <p className="text-[8px] 800px:text-[16px] text-center">
         <strong>Disclaimer:</strong> Please note that all trading accounts are
         demo accounts with <strong>ficticious funds</strong> and{" "}

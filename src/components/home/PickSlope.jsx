@@ -31,7 +31,7 @@ const PickSlope = () => {
   };
 
   return (
-    <div className="relative bg-bgPrimary w-full py-14  800px:py-8  font-montserrat">
+    <div className="relative bg-bgPrimary w-full py-14  800px:py-8  font-montserrat" id='section6'>
       <h1 className="mx-auto w-fit text-3xl 800px:text-4xl text-primary font-bold font-montserrat">
         Pick Your Slope
       </h1>

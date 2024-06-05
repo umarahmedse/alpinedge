@@ -30,7 +30,7 @@ const ClientArea = () => {
       transition={{ duration: 0.5 }}
       className="w-full 800px:p-8 px-8 bg-white"
     >
-      <div className="flex items-center gap-12 flex-col 800px:flex-row-reverse ">
+      <div className="flex items-center gap-12 flex-col 800px:flex-row-reverse " id='section9'>
         <div className="flex flex-col gap-4 800px:w-1/2 h-full">
           <h1 className="font-bold text-primary font-montserrat text-xl 800px:text-[1.8rem]">
             Our Client Area

@@ -30,7 +30,7 @@ const OurBrooker = () => {
       transition={{ duration: 0.5 }}
       className="w-full p-8 bg-white"
     >
-      <div className="800px:flex items-center justify-between gap-2 flex-col 800px:flex-row  hidden">
+      <div className="800px:flex items-center justify-between gap-2 flex-col 800px:flex-row  hidden" id='section7'>
         <div className="flex flex-col gap-3 md:gap-6 800px:w-1/2 h-full">
           <h1 className="font-bold text-primary font-montserrat text-[16px] 800px:text-xl 800px:text-[1.8rem]">
             Our Brooker

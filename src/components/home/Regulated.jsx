@@ -32,7 +32,7 @@ const Regulated = () => {
       transition={{ duration: 0.5 }}
       className="w-full 800px:p-8 px-8 bg-white"
     >
-      <div className="flex flex-col gap-6 w-full h-full mb-4">
+      <div className="flex flex-col gap-6 w-full h-full mb-4" id='section8'>
         <h1 className="font-bold text-primary font-montserrat text-xl 800px:text-[1.8rem]">
           FOUR TIMES REGULATED & LICENCED{" "}
         </h1>

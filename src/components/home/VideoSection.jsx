@@ -37,7 +37,7 @@ const VideoSection = () => {
       transition={{ duration: 0.5 }}
       className="w-full flex items-center justify-center flex-col relative bg-successSlope bg-no-repeat bg-center bg-cover py-7 px-12 1200px:p-16 gap-4 font-montserrat text-white"
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div> 
+      <div className="absolute inset-0 bg-black opacity-50" id='section4'></div> 
 
       <video
         src="https://res.cloudinary.com/djab9oyj8/video/upload/v1717438389/t0dfjjmqax2lggrxsho4.mp4"

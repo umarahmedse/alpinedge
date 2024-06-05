@@ -1,5 +1,6 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { navBarSocialData } from "../../data/navbarData";
+import { HiDotsHorizontal } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
             role="button"
             className="p-2 bg-transparent rounded-lg flex items-center justify-center"
           >
-            <RxHamburgerMenu size={30} color="#004D99" stroke="" />
+            <HiDotsHorizontal size={30} color="#004D99" stroke="" />
           </div>
           <ul
             tabIndex={0}

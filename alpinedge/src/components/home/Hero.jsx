@@ -73,7 +73,9 @@ const Hero = () => {
     >
       <div className="flex items-center flex-col ">
         <img src="/logo.webp" alt="logo image" className="800px:w-[250px] w-[100px]" />
-        <h1 className="text-primary 800px:block hidden 800px:font-montserrat uppercase 800px:text-[6rem] text-[2rem] font-bold leading-none mt-2 800px:mt-0">
+        <h1 style={{ 
+        textShadow: '0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)',
+      }}  className="text-primary 800px:block hidden Mokoto uppercase text-[5rem]  font-bold leading-none mt-2 800px:mt-0">
           Alpinedge
         </h1>
         <h1 className="text-primary block 800px:hidden nosifer-regular uppercase text-[2rem] font-bold leading-none mt-2 800px:mt-0">
@@ -81,7 +83,7 @@ const Hero = () => {
         </h1>
         <h2
           className="text-white font-montserrat capitalize 800px:text-[2rem] text-[1rem] font-bold leading-none mt-0"
-          style={{ textShadow: "0 0 5px rgba(0,0,0,0.5)" }}
+          style={{ letterSpacing: '-3px', textShadow: '0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)', }}
         >
           Slope To Success
         </h2>

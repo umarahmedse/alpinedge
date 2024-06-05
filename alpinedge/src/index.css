@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@font-face {
+  font-family: 'Mokoto';
+  src: url('./fonts/ttf/mokoto-mokoto-regular-400.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,4 +15,7 @@
     line-height: 54.18px;
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
     0px -4px 10px rgba(255,255,255,0.3);
+  }
+  .Mokoto{
+    font-family: 'Mokoto', sans-serif;
   }

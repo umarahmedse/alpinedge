@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import AlpineCompanions from "../components/home/AlpineCompanions";
@@ -18,6 +19,15 @@ import PickSlope from "../components/home/PickSlope";
 import Regulated from "../components/home/Regulated";
 
 const HomePage = () => {
+  const [disclaimer, setDisclaimer] = useState(false);
+  // get local storage disclaimer value and hide disclaimer if true using useEffect
+  useEffect(() => {
+    if (localStorage.getItem("disclaimer") === "true") {
+      setDisclaimer(true);
+    } else {
+      setDisclaimer(false);
+    }
+  },[disclaimer]);
   return (
     <div className="bg-bgPrimary overflow-hidden">
       <Hero />
@@ -33,13 +43,13 @@ const HomePage = () => {
           duration={0.5}
         />
       </div> */}
-<CoinSlider/>
-      <StatsDisclaimer />
-      <VideoSection/>
+      {disclaimer ? "" : <StatsDisclaimer />}
+      <CoinSlider />
+      <VideoSection />
       <HowItWorks />
-      <PickSlope/>
+      <PickSlope />
       <OurBrooker />
-      <Regulated/>
+      <Regulated />
       <ClientArea />
       <WhatSetsApart />
       <AlpinedgeTraders />

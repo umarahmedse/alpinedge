@@ -22,13 +22,13 @@ const Header = () => {
           to={"/login"}
           className="px-8 py-2 uppercase text-md bg-primary 800px:block hidden font-bold text-white rounded-lg"
         >
-          Client Area{" "}
+          Client Area
         </Link>
         <Link
           to={"/login"}
           className="800px:px-8 py-2 800px:hidden block uppercase md:text-md bg-primary text-[8px] px-2 font-bold text-white rounded-lg"
         >
-          Client Area{" "}
+          Client Area
         </Link>
         <div className="dropdown dropdown-end">
           <div

@@ -25,7 +25,7 @@ const StatsDisclaimer = () => {
         ""
       ) : (
         <div
-          className="800px:p-4 px-2 pb-12 800px:py-10 "
+          className="800px:p-4 px-2 py-10 800px:py-10 "
           id="section3"
         >
           <p className="text-[20px] 800px:text-[22px] text-center ">

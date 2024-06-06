@@ -48,11 +48,12 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
-        heroBg: "url('/heroBg.webp')",
+        heroBg: "url('/banner alpine.png')",
         ice: "url('/iceline.png')",
         climateBg: "url('/Climate.webp')",
         successSlope: "url('/successSlope.webp')",
-        mobileBg:"url('/moblieBg.png')"
+        mobileBg:"url('/moblieBg.png')",
+        mobileHeroBg:"url('/mobileHeroBg.png')"
       },
     },
   },

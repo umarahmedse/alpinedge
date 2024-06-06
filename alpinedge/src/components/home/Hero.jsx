@@ -116,15 +116,16 @@ const Hero = () => {
 
   return (
     <div
-      ref={bgRef}
+      
       id="section1"
-     className="relative h-[80vh] 800px:h-[120vh] w-full bg-cover bg-heroBg bg-no-repeat bg-center flex items-center gap-24 800px:gap-52 flex-col"
+     className=" h-[80vh] 800px:h-[120vh] w-full bg-cover bg-mobileHeroBg 800px:bg-heroBg bg-center flex items-center gap-24 800px:gap-52 flex-col"
     >
-      <div className="flex items-center flex-col ">
+     <div className="flex flex-col justify-between  h-full w-full pb-16 800px:pb-10">
+     <div className="flex items-center flex-col justify-between">
         <img
           src="/logo.webp"
           alt="logo image"
-          className="800px:w-[270px] w-[100px] mb-4"
+          className="800px:w-[270px] w-[200px] 800px:mb-4"
         />
         {/* for desktop heading */}
         <h1
@@ -140,11 +141,11 @@ const Hero = () => {
         <h1  style={{
             textShadow:
               "0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)",
-          }} className="text-primary block 800px:hidden nosifer-regular uppercase text-[2rem] font-bold leading-none mt-2 800px:mt-0">
+          }} className="text-primary block 800px:hidden nosifer-regular uppercase text-[2.3rem] font-bold leading-none mt-2 800px:mt-0">
           Alpinedge
         </h1>
         <h2
-          className="text-white font-montserrat capitalize 800px:text-[2.5rem] text-[1.6rem] font-bold leading-none mt-3"
+          className="text-white font-montserrat capitalize 800px:text-[2.5rem] text-[1.8rem] font-bold leading-none mt-3"
           style={{
             letterSpacing: "-2px",
             textShadow:
@@ -154,7 +155,7 @@ const Hero = () => {
           Slope To Success
         </h2>
       </div>
-      <div className="flex flex-col items-center gap-4 absolute bottom-20 700px:bottom-6 ">
+      <div className="flex flex-col items-center gap-4 ">
         <motion.button
           initial={{ y: "100vh", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -183,6 +184,7 @@ const Hero = () => {
           </motion.button>
         </a>
       </div>
+     </div>
 
       {/* Hamburger Button */}
       <Link

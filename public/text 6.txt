@@ -1,0 +1,6 @@
+Section: Our Client Area
+
+Problem: Different Needs because of Broker Change.
+
+Exchange Phones Picture (next to Client Area Screenshot) to the following:
+(You can crop it to for example only phone, if the whole image is too large/does not look good)

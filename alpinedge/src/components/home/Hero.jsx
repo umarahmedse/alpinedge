@@ -1,11 +1,34 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp, MdKeyboardDoubleArrowDown, MdKeyboardDoubleArrowUp } from "react-icons/md";
+import sikers from "../../../public/sikers.png";
+import {
+  MdKeyboardArrowDown,
+  MdKeyboardArrowUp,
+  MdKeyboardDoubleArrowDown,
+  MdKeyboardDoubleArrowUp,
+} from "react-icons/md";
 
 const Hero = () => {
   const bgRef = useRef(null);
-  const sectionIds = ["section1", "section2", "section3", "section5","section6", "section7", "section8", "section9","section10", "section11", "section12", "section13"]; // Add your section IDs here
+  const sectionIds = [
+    "section1",
+    "section2",
+    "section3",
+    "section4",
+    "section5",
+    "section6",
+    "section7",
+    "section8",
+    "section9",
+    "section10",
+    "alpinedgeTraders",
+    "alpineCompanions",
+    "assistantArea",
+    "climateArea",
+    "successSlope",
+    "joinUsNow",
+  ];
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
@@ -25,57 +48,83 @@ const Hero = () => {
 
   const scrollToSection = (index) => {
     const section = document.getElementById(sectionIds[index]);
+
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const handleArrowUpClick = () => {
-    const currentIndex = sectionIds.findIndex(id => {
+  const getCurrentSectionIndex = () => {
+    const viewportHeight = window.innerHeight;
+    let closestSectionIndex = -1;
+    let closestDistance = Infinity;
+
+    sectionIds.forEach((id, index) => {
       const section = document.getElementById(id);
-      return section && section.getBoundingClientRect().top >= 0;
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const distance = Math.abs(rect.top - viewportHeight / 2);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestSectionIndex = index;
+        }
+      }
     });
 
+    return closestSectionIndex;
+  };
+
+  const handleArrowUpClick = () => {
+    const currentIndex = getCurrentSectionIndex();
     if (currentIndex > 0) {
       scrollToSection(currentIndex - 1);
     }
   };
 
   const handleArrowDownClick = () => {
-    const currentIndex = sectionIds.findIndex(id => {
-      const section = document.getElementById(id);
-      return section && section.getBoundingClientRect().top >= 0;
-    });
-
+    const currentIndex = getCurrentSectionIndex();
     if (currentIndex < sectionIds.length - 1) {
       scrollToSection(currentIndex + 1);
+    }
+    // Add a condition to do nothing if already at the last section
+    else {
+      // Do nothing
     }
   };
 
   const handleDoubleArrowUpClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
   const handleDoubleArrowDownClick = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  };
+};
 
   return (
     <div
-      ref={bgRef} id="section1"
+      ref={bgRef}
+      id="section1"
       className="relative 800px:h-[120vh] w-full bg-heroBg bg-cover overflow-hidden bg-no-repeat bg-center flex items-center gap-24 800px:gap-52 flex-col"
     >
       <div className="flex items-center flex-col ">
-        <img src="/logo.webp" alt="logo image" className="800px:w-[250px] w-[100px]" />
-        <h1 style={{ 
-        textShadow: '0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)',
-      }}  className="text-primary 800px:block hidden Mokoto uppercase text-[5rem]  font-bold leading-none mt-2 800px:mt-0">
+        <img
+          src="/logo.webp"
+          alt="logo image"
+          className="800px:w-[250px] w-[100px]"
+        />
+        <h1
+          style={{
+            textShadow:
+              "0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)",
+          }}
+          className="text-primary 800px:block hidden Mokoto uppercase text-[5rem]  font-bold leading-none mt-2 800px:mt-0"
+        >
           Alpinedge
         </h1>
         <h1 className="text-primary block 800px:hidden nosifer-regular uppercase text-[2rem] font-bold leading-none mt-2 800px:mt-0">
@@ -83,7 +132,11 @@ const Hero = () => {
         </h1>
         <h2
           className="text-white font-montserrat capitalize 800px:text-[2rem] text-[1rem] font-bold leading-none mt-0"
-          style={{ letterSpacing: '-3px', textShadow: '0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)', }}
+          style={{
+            letterSpacing: "-3px",
+            textShadow:
+              "0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px rgba(60, 64, 67, 0.15)",
+          }}
         >
           Slope To Success
         </h2>
@@ -103,7 +156,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="px-8 py-3 hidden 800px:block uppercase 800px:text-lg 800px:bg-bgPrimary bg-primary/50 text-white 800px:text-primary font-[500] rounded-lg"
         >
-          Coming Soon 
+         BUY SKI PASS
         </motion.button>
       </div>
 
@@ -131,15 +184,39 @@ const Hero = () => {
               onClick={() => setIsDrawerOpen(false)}
               className="absolute top-4 right-4 text-white"
             >
-                     <HiDotsHorizontal size={30} />
-
+              <HiDotsHorizontal size={30} />
+              <img src={sikers} alt="" />
             </button>
             <div className="mt-40 flex flex-col justify-center items-center gap-4 my-auto h-1/2">
-              <MdKeyboardDoubleArrowUp id="double-arrow-up" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleDoubleArrowUpClick} />
-              <MdKeyboardArrowUp id="arrow-up" size={40} color="#fff" className="animate-bounce hover:cursor-pointer" onClick={handleArrowUpClick} />
+              <MdKeyboardDoubleArrowUp
+                id="double-arrow-up"
+                size={40}
+                color="#fff"
+                className="animate-bounce hover:cursor-pointer"
+                onClick={handleDoubleArrowUpClick}
+              />
+              <MdKeyboardArrowUp
+                id="arrow-up"
+                size={40}
+                color="#fff"
+                className="animate-bounce hover:cursor-pointer"
+                onClick={handleArrowUpClick}
+              />
               <div className="h-32 border-l-2 border-dashed border-white"></div>
-              <MdKeyboardArrowDown id="arrow-down" size={40} color="#fff" className="animate-bounceReverse hover:cursor-pointer" onClick={handleArrowDownClick} />
-              <MdKeyboardDoubleArrowDown id="double-arrow-down" size={40} color="#fff" className="animate-bounceReverse hover:cursor-pointer" onClick={handleDoubleArrowDownClick} />
+              <MdKeyboardArrowDown
+                id="arrow-down"
+                size={40}
+                color="#fff"
+                className="animate-bounceReverse hover:cursor-pointer"
+                onClick={handleArrowDownClick}
+              />
+              <MdKeyboardDoubleArrowDown
+                id="double-arrow-down"
+                size={40}
+                color="#fff"
+                className="animate-bounceReverse hover:cursor-pointer"
+                onClick={handleDoubleArrowDownClick}
+              />
             </div>
           </motion.div>
         )}

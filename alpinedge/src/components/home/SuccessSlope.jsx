@@ -8,16 +8,18 @@ const SuccessSlope = () => {
   useEffect(() => {
     const handleScroll = () => {
       const top = window.pageYOffset + window.innerHeight;
-      const elementTop = document.getElementById("successSlope").offsetTop;
+      const element = document.getElementById("successSlope");
 
-      if (top > elementTop) {
-        setIsVisible(true);
+      if (element) {
+        const elementTop = element.offsetTop;
+        if (top > elementTop) {
+          setIsVisible(true);
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

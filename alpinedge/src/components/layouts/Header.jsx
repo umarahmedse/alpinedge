@@ -3,6 +3,7 @@ import { navBarSocialData } from "../../data/navbarData";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
   return (
     <div className="w-full flex items-center justify-between p-5 font-montserrat bg-bgPrimary">
@@ -18,31 +19,32 @@ const Header = () => {
         ))}
       </div>
       <div className="flex items-center gap-4 ml-auto">
-        <button className="px-8 py-2 uppercase text-md bg-primary 800px:block hidden font-bold text-white rounded-lg">
-          Coming Soon{" "}
-        </button>
-        <button className="800px:px-8 py-2 800px:hidden block uppercase md:text-md bg-primary text-[8px] px-2 font-bold text-white rounded-lg">
-          Coming Soon{" "}
-        </button>
+        <Link to={"/login"} className="px-8 py-2 uppercase text-md bg-primary 800px:block hidden font-bold text-white rounded-lg">
+          Client Area{" "}
+        </Link>
+        <Link to={"/login"} className="800px:px-8 py-2 800px:hidden block uppercase md:text-md bg-primary text-[8px] px-2 font-bold text-white rounded-lg">
+        Client Area{" "}
+        </Link>
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
             role="button"
             className="p-2 bg-transparent rounded-lg flex items-center justify-center"
           >
-            <HiDotsHorizontal size={30} color="#004D99" stroke="" />
+            <HiDotsHorizontal size={40} color="#004D99" stroke="" />
+            
           </div>
           <ul
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to={"/privacy-policy"}>Privacy Policy</Link>
+              <Link to={"/privacy-policy" } className="hover:font-bold transition-all">Privacy Policy</Link>
             </li>
             <li>
-              <Link to={"/cookie-policy"}>Cookie Policy</Link>
+              <Link to={"/cookie-policy"} className="hover:font-bold transition-all">Cookie Policy</Link>
             </li>
-            <li>
+            <li className="hover:font-bold transition-all">
               <Link to={"/imprint"}>Imprint</Link>
             </li>
             {navBarSocialData.map((item, index) => (

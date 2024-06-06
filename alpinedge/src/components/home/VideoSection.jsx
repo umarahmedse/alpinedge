@@ -35,7 +35,7 @@ const VideoSection = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="w-full flex items-center justify-center flex-col relative bg-successSlope bg-no-repeat bg-center bg-cover py-7 px-12 1200px:p-16 gap-4 font-montserrat text-white"
+      className="w-full flex items-center justify-center flex-col relative bg-successSlope bg-no-repeat bg-center bg-cover py-7 px-12 1200px:p-16 gap-4 font-montserrat text-white 800px:mt-2"
     >
       <div className="absolute inset-0 bg-black opacity-50" id='section4'></div> 
 

@@ -2,7 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
 import sikers from "../../../public/sikers.png";
+import { Link } from 'react-router-dom';
+import { RxCrossCircled } from "react-icons/rx";
 import {
+
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdKeyboardDoubleArrowDown,
@@ -86,9 +89,9 @@ const Hero = () => {
     if (currentIndex < sectionIds.length - 1) {
       scrollToSection(currentIndex + 1);
     }
-    // Add a condition to do nothing if already at the last section
+    
     else {
-      // Do nothing
+      
     }
   };
 
@@ -104,7 +107,7 @@ const Hero = () => {
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
-};
+  };
 
   return (
     <div
@@ -156,19 +159,20 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="px-8 py-3 hidden 800px:block uppercase 800px:text-lg 800px:bg-bgPrimary bg-primary/50 text-white 800px:text-primary font-[500] rounded-lg"
         >
-         BUY SKI PASS
+          BUY SKI PASS
         </motion.button>
       </div>
 
       {/* Hamburger Button */}
-      <button
+      <Link
         onClick={() => setIsDrawerOpen(true)}
-        className="absolute top-4 right-4 z-20 p-2 rounded-md shadow-md md:block hidden"
+        className="fixed right-0 top-15 z-30 rounded-md md:block hidden"
       >
-        <div className="w-6 h-0.5 bg-black mb-1 "></div>
+        {/* <div className="w-6 h-0.5 bg-black mb-1 "></div>
         <div className="w-6 h-0.5 bg-black mb-1"></div>
-        <div className="w-6 h-0.5 bg-black"></div>
-      </button>
+        <div className="w-6 h-0.5 bg-black"></div> */}
+          <img src={sikers} alt="" />
+      </Link>
 
       {/* Drawer Overlay */}
       <AnimatePresence>
@@ -178,14 +182,18 @@ const Hero = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 w-[100px] h-full bg-blue-600 bg-opacity-60 z-40 p-4"
+            className="fixed top-0 right-0 w-[100px] h-full  z-40 p-4"
+            style={{
+              backgroundImage: "linear-gradient(180deg, rgba(0, 60, 130, 0), rgba(0, 60, 130, 1))",
+            }}
           >
             <button
               onClick={() => setIsDrawerOpen(false)}
-              className="absolute top-4 right-4 text-white"
+              className="absolute top-10 left-0   flex items-center w-full justify-center  text-white "
             >
-              <HiDotsHorizontal size={30} />
-              <img src={sikers} alt="" />
+              <RxCrossCircled size={30} />
+              
+            
             </button>
             <div className="mt-40 flex flex-col justify-center items-center gap-4 my-auto h-1/2">
               <MdKeyboardDoubleArrowUp

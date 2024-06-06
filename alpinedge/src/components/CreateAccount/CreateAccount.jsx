@@ -2,7 +2,7 @@ import bgImg from '../../assets/register-bg.png';
 import { FaGlobeAmericas, FaUser } from 'react-icons/fa';
 import { MdEmail, MdVpnKey } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
-import baseURL from '../../../axios.js';
+// import baseURL from '../../../axios.js';
 import { useState } from 'react';
 
 const CreateAccount = () => {

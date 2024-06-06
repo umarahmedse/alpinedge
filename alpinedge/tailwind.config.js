@@ -52,6 +52,7 @@ module.exports = {
         ice: "url('/iceline.png')",
         climateBg: "url('/Climate.webp')",
         successSlope: "url('/successSlope.webp')",
+        mobileBg:"url('/moblieBg.png')"
       },
     },
   },

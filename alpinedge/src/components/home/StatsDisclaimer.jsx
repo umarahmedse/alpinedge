@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const StatsDisclaimer = () => {
   return (
     <div className="bg-bgPrimary 800px:p-4 p-2" id='section3'>
@@ -5,7 +7,7 @@ const StatsDisclaimer = () => {
         <strong>Disclaimer:</strong> Please note that all trading accounts are
         demo accounts with <strong>ficticious funds</strong> and{" "}
         <strong>simulated order execution</strong>. For more information, visit
-        our FAQ page.{" "}
+        our <Link to={"/"}>FAQ</Link> page.{" "}
         <strong className="text-primary">Okay, I understand.</strong>
       </p>
     </div>

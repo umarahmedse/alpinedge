@@ -2,10 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
 import sikers from "../../../public/sikers.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { RxCrossCircled } from "react-icons/rx";
 import {
-
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdKeyboardDoubleArrowDown,
@@ -88,10 +87,7 @@ const Hero = () => {
     const currentIndex = getCurrentSectionIndex();
     if (currentIndex < sectionIds.length - 1) {
       scrollToSection(currentIndex + 1);
-    }
-    
-    else {
-      
+    } else {
     }
   };
 
@@ -109,11 +105,20 @@ const Hero = () => {
     });
   };
 
+  // handleScrollToSpecificSection
+  const handleScrollToSpecificSection = () => {
+    const section = document.getElementById("section2");
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       ref={bgRef}
       id="section1"
-      className="relative 800px:h-[120vh] w-full bg-heroBg bg-cover overflow-hidden bg-no-repeat bg-center flex items-center gap-24 800px:gap-52 flex-col"
+      className="relative h-[50vh] 800px:h-[120vh] w-full bg-heroBg bg-cover overflow-hidden bg-no-repeat bg-center flex items-center gap-24 800px:gap-52 flex-col"
     >
       <div className="flex items-center flex-col ">
         <img
@@ -149,18 +154,29 @@ const Hero = () => {
           initial={{ y: "100vh", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0 }}
-          className="px-8 py-3 hidden 800px:block uppercase 800px:text-lg bg-primary text-white font-[500] rounded-lg"
+          className="px-10 py-4  uppercase 800px:text-2xl bg-primary text-white font-[500] rounded-lg"
+          style={{
+            boxShadow:
+              "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+          }}
+          onClick={handleScrollToSpecificSection}
         >
           Start Your Alpine journey
         </motion.button>
-        <motion.button
-          initial={{ y: "100vh", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="px-8 py-3 hidden 800px:block uppercase 800px:text-lg 800px:bg-bgPrimary bg-primary/50 text-white 800px:text-primary font-[500] rounded-lg"
-        >
-          BUY SKI PASS
-        </motion.button>
+        <a href={"/create-account"}>
+          <motion.button
+            initial={{ y: "100vh", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="px-8 py-3  uppercase 800px:text-lg 800px:bg-bgPrimary bg-primary/50 text-white 800px:text-primary font-[500] rounded-lg"
+            style={{
+              boxShadow:
+                "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
+            }}
+          >
+            BUY SKI PASS
+          </motion.button>
+        </a>
       </div>
 
       {/* Hamburger Button */}
@@ -171,7 +187,7 @@ const Hero = () => {
         {/* <div className="w-6 h-0.5 bg-black mb-1 "></div>
         <div className="w-6 h-0.5 bg-black mb-1"></div>
         <div className="w-6 h-0.5 bg-black"></div> */}
-          <img src={sikers} alt="" />
+        <img src={sikers} alt="" />
       </Link>
 
       {/* Drawer Overlay */}
@@ -184,7 +200,8 @@ const Hero = () => {
             transition={{ duration: 0.3 }}
             className="fixed top-0 right-0 w-[100px] h-full  z-40 p-4"
             style={{
-              backgroundImage: "linear-gradient(180deg, rgba(0, 60, 130, 0), rgba(0, 60, 130, 1))",
+              backgroundImage:
+                "linear-gradient(180deg, rgba(0, 60, 130, 0), rgba(0, 60, 130, 1))",
             }}
           >
             <button
@@ -192,8 +209,6 @@ const Hero = () => {
               className="absolute top-10 left-0   flex items-center w-full justify-center  text-white "
             >
               <RxCrossCircled size={30} />
-              
-            
             </button>
             <div className="mt-40 flex flex-col justify-center items-center gap-4 my-auto h-1/2">
               <MdKeyboardDoubleArrowUp

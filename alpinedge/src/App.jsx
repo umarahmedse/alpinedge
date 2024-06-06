@@ -5,21 +5,29 @@ import HomePage from "./pages/HomePage";
 import Imprint from "./pages/Imprint";
 import LoaderPage from "./pages/LoaderPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Subpage4 from "./components/Subpage4/Subpage4"
+import Subpage4 from "./components/Subpage4/Subpage4";
 import HomeLayout from "./utils/layouts/HomeLayout";
 import { Route, Routes } from "react-router-dom";
+import CreateAccount from "./components/CreateAccount/CreateAccount";
+import AboutUs from "./components/Subpage4/AboutUs";
+import FaqPage from "./pages/FaqPage";
+import Trust from "./pages/Trust";
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<HomeLayout />}>
           <Route element={<HomePage />} index />
+
           <Route path="privacy-policy" element={<PrivacyPolicy />} index />
           <Route element={<CookiePolicy />} path="cookie-policy" />
           <Route element={<Imprint />} path="imprint" />
           <Route element={<Subpage4 />} path="landing" />
-
+          <Route element={<AboutUs />} path="/about-us" />
+          <Route element={<FaqPage />} path="/faq" />
+          <Route element={<Trust />} path="/trust" />
         </Route>
+        <Route element={<CreateAccount />} path="/create-account" />
       </Routes>
     </>
   );

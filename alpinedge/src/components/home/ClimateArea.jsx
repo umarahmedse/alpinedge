@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ClimateArea = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,7 +63,7 @@ const ClimateArea = () => {
         future generations.
       </p>
       <h1 className="font-bold text-xl uppercase text-white text-center">
-        Explore our partnership with Stripe Climate here.{" "}
+        Explore our partnership with Stripe Climate <Link className="hover:underline hover:transition-all"  to={"https://climate.stripe.com/x5HBms"}>Here</Link>.{" "}
       </h1>
     </motion.div>
   );

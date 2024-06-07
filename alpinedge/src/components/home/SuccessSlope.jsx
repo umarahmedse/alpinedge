@@ -37,11 +37,11 @@ const SuccessSlope = () => {
       initial={{ opacity: 0 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="w-full flex items-center bg-center justify-center flex-col bg-successSlope bg-no-repeat bg-cover px-6 py-10 md:p-16 gap-4 font-montserrat text-white"
+      className="w-full flex items-center bg-center justify-center flex-col bg-mobileBgSlop md:bg-successSlope bg-no-repeat bg-cover px-6 py-10 md:p-16 gap-4 font-montserrat text-white"
     >
       <div>
         {" "}
-        <h1 className="font-bold text-3xl uppercase text-white text-center mb-4">
+        <h1 className="font-bold text-2xl uppercase text-white text-center mb-4 opacity-80">
         Slope to Success Ski Club
         </h1>
         <p className="text-md uppercase font-bold text-center max-w-[900px]">

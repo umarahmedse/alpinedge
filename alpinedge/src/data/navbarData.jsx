@@ -83,6 +83,44 @@ export const faqData = [
   },
 ];
 
+export const footerSocialData = [
+  {
+    icon: <FaInstagram size={20} color="#000" />,
+    link: "https://instagram.com/slopetosuccess",
+    title: "Instagram",
+  },
+  {
+    icon: <FaThreads size={20} color="#000"  />,
+    link: "https://threads.net/@slopetosuccess",
+    title: "Threads",
+  },
+  {
+    icon: <FaFacebookSquare size={20} color="#000"  />,
+    link: "https://facebook.com/profile.php?id61557956646568",
+    title: "Facebook",
+  },
+  {
+    icon: <FaYoutube size={20} color="#000"  />,
+    link: "https://youtube.com/@slopetosuccess",
+    title: "Youtube",
+  },
+  {
+    icon: <FaDiscord size={20} color="#000"  />,
+    link: "N/A - not available yet will go live after launch",
+    title: "Discord",
+  },
+  {
+    icon: <FaTiktok size={20} color="#000"  />,
+    link: "https://tiktok.com/@slopetosuccess",
+    title: "Tiktok",
+  },
+  {
+    icon: <FaLinkedin size={20} color="#000"  />,
+    link: "https://linkedin.com/company/sloptosuccess",
+    title: "LinkedIn",
+  },
+  
+];
 export const joinUsSocials = [
   {
     icon: <FaInstagram size={20} color="#fff" />,
@@ -118,37 +156,5 @@ export const joinUsSocials = [
     icon: <FaLinkedin size={20} color="#fff" />,
     link: "https://linkedin.com/company/sloptosuccess",
     title: "LinkedIn",
-  },
-];
-export const footerSocialData = [
-  {
-    icon: <FaInstagram size={25} color="#004D99" />,
-    link: "",
-    title: "Instagram",
-  },
-  {
-    icon: <FaThreads size={25} color="#004D99" />,
-    link: "",
-    title: "Threads",
-  },
-  {
-    icon: <FaFacebookSquare size={25} color="#004D99" />,
-    link: "",
-    title: "Facebook",
-  },
-  {
-    icon: <FaYoutube size={25} color="#004D99" />,
-    link: "",
-    title: "Youtube",
-  },
-  {
-    icon: <FaDiscord size={25} color="#004D99" />,
-    link: "",
-    title: "Discord",
-  },
-  {
-    icon: <FaTiktok size={25} color="#004D99" />,
-    link: "",
-    title: "Tiktok",
   },
 ];

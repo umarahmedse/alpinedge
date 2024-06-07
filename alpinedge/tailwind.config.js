@@ -55,6 +55,9 @@ module.exports = {
         mobileBg:"url('/moblieBg.png')",
         mobileHeroBg:"url('/mobileHeroBg.png')",
         priceTag:"url('/PriceTag.png')",
+        mobileBgSlop:"url('/mobileBgSlope.svg')",
+        joinUsBg:"url('/joinUsBg.png')",
+        joinUs:"url('/joinUs.svg')",
         
       },
 

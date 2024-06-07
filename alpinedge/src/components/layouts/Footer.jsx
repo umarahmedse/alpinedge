@@ -123,7 +123,7 @@ const Footer = () => {
           alt="alpine partners"
           className="hover "
         /> 
-        
+        {/* Disclaimer */}
       </div>
       <div className="flex flex-col items-start gap-4 1000px:w-1/4">
         <h1 className="font-bold">Disclaimer</h1>

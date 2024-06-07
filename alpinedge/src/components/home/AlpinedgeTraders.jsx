@@ -47,6 +47,11 @@ const AlpinedgeTraders = () => {
         alt="bg-img"
         className="absolute right-0"
       />
+      {/* <img
+        src="https://i.ibb.co/c1kBMGs/Mask-group-2.webp"
+        alt="bg-img"
+        className="absolute right-0"
+      /> */}
       <h1 className="text-primary font-montserrat font-bold text-3xl 800px:text-4xl text-center uppercase  mt-12">
         hear from our alpinedge traders
       </h1>

@@ -44,16 +44,18 @@ const VideoSection = () => {
       transition={{ duration: 0.5 }}
       className="w-full flex items-center justify-center flex-col relative bg-successSlope bg-no-repeat bg-center bg-cover py-10 px-12 1200px:py-24  gap-4 font-montserrat text-white 800px:mt-2"
     >
-      <div className="absolute inset-0 bg-black opacity-50 800px:opacity-1" id='section4'></div> 
+      <div className="absolute inset-0 bg-black opacity-50 800px:hidden" id='section4'></div> 
 
-      <video
+      {/* <video
        src="https://res.cloudinary.com/djab9oyj8/video/upload/v1717689820/ALOIS_MAIN_lzsiio.mp4" 
         className="relative 1200px:w-[1200px] 1200px:h-[600px]"
         autoPlay
         loop
         muted
         controls
-      ></video>
+      ></video> */}
+
+<iframe className="relative 1200px:w-[1200px] 1200px:h-[600px]" src="https://www.videoask.com/f9x0tyz7s" allow="camera *; microphone *; autoplay *; encrypted-media *; fullscreen *; display-capture *;" width="100%" height="600px"></iframe>
       <p className="font-medium 1200px:text-xl text-[12px] 1200px:block hidden underline text-white absolute bottom-2 1200px:bottom-10 1200px:right-16 cursor-pointer right-11" onClick={handleScrollToNextSection}>Skip</p>
       <p className="font-medium 1200px:text-xl text-[8px] 1200px:hidden block underline text-white absolute bottom-3 1200px:bottom-10 1200px:right-16 cursor-pointer right-11"  onClick={handleScrollToNextSection}>Skip-Continue With Site</p>
      {/* <iframe src="https://www.videoask.com/f9x0tyz7s" className="relative 1200px:w-[1200px]"></iframe> */}

@@ -47,39 +47,28 @@ const AlpinedgeTraders = () => {
         alt="bg-img"
         className="absolute right-0"
       />
-      <h1 className="text-primary font-montserrat font-bold text-3xl 800px:text-4xl text-center uppercase mb-32 mt-12">
+      <h1 className="text-primary font-montserrat font-bold text-3xl 800px:text-4xl text-center uppercase  mt-12">
         hear from our alpinedge traders
       </h1>
       <motion.div
-        className="flex items-center w-full flex-col 1000px:flex-row p-4 1000px:p-0 gap-4 1000px:gap-0"
+        className="flex items-center w-full flex-col 1000px:flex-row  1000px:p-0 1000px:gap-0"
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ duration: 0.5, delay: 0.2, staggerChildren: 0.3 }}
       >
-        <motion.div
-          className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl ml-4"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <img
-            src="https://i.ibb.co/YybN3f3/aa02354593c6d7988bc84db09e2c8bf3.webp"
-            alt="Shoes"
-            className="object-cover h-full rounded-2xl"
-          />
-        </motion.div>
         <video
           controls={false}
           preload="auto"
           muted
           autoPlay
           loop
-          className="1000px:w-[60%] w-full"
+          className="w-full"
         >
           <source src="alpinedgeTraders.webm" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        <motion.div
+        {/* <motion.div
           className="card 1000px:w-[20%] w-full h-96 bg-base-100 shadow-xl mr-4"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -89,7 +78,7 @@ const AlpinedgeTraders = () => {
             alt="Shoes"
             className="object-cover h-full rounded-2xl"
           />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.div>
   );

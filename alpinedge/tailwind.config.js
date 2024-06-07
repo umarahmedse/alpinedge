@@ -53,8 +53,11 @@ module.exports = {
         climateBg: "url('/Climate.webp')",
         successSlope: "url('/successSlope.webp')",
         mobileBg:"url('/moblieBg.png')",
-        mobileHeroBg:"url('/mobileHeroBg.png')"
+        mobileHeroBg:"url('/mobileHeroBg.png')",
+        priceTag:"url('/PriceTag.png')",
+        
       },
+
     },
   },
 };
